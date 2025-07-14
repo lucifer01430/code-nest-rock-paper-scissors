@@ -1,0 +1,236 @@
+/* ====== Global ====== */
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Montserrat', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ====== Header ====== */
+header {
+  width: 100%;
+  background: rgba(30, 60, 114, 0.85);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  padding: 1.2rem 0 0.7rem 0;
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffd700;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 2px 8px #222;
+  position: relative;
+  z-index: 2;
+}
+
+header .info-btn {
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+  background: none;
+  border: none;
+  color: #ffd700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 3;
+}
+
+header .info-btn:hover {
+  color: #fff;
+}
+
+/* ====== Main Game Layout ====== */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* ====== Game Card ====== */
+.game-card {
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.22);
+  position: relative;
+}
+
+/* ====== Game Title ====== */
+.game-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffd700;
+  text-shadow: 0 2px 8px #000;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ====== Choice Buttons ====== */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.choice-btn {
+  background: linear-gradient(135deg, #ffd700 60%, #fffbe6 100%);
+  color: #1e3c72;
+  border: none;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  font-size: 2.2rem;
+  box-shadow: 0 2px 12px rgba(30, 60, 114, 0.18);
+  transition: transform 0.18s, box-shadow 0.18s;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.choice-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 4px 18px #ffd70099;
+  z-index: 2;
+}
+
+.choice-btn:active {
+  transform: scale(0.98);
+}
+
+/* ====== Visual Result Layout ====== */
+.visual-choices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.2rem 0 0.7rem 0;
+  font-size: 1.3rem;
+}
+
+.visual-choices .side {
+  flex: 1;
+  text-align: center;
+}
+
+.visual-choices .vs {
+  flex: 0.3;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+/* ====== Result Text ====== */
+.result {
+  font-size: 1.25rem;
+  margin: 1.2rem 0 0.7rem 0;
+  font-weight: 600;
+  min-height: 2.2em;
+  letter-spacing: 0.5px;
+  color: #ffd700;
+  text-shadow: 0 2px 8px #222;
+}
+
+/* ====== Score Board ====== */
+.score-board {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 12px;
+  padding: 0.7rem 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 2px 8px #ffd70022;
+}
+
+.score-board span {
+  font-size: 1.3rem;
+  color: #ffd700;
+  font-weight: 700;
+}
+
+/* ====== Reset Button ====== */
+.btn-danger {
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  margin-top: 1.2rem;
+  box-shadow: 0 2px 8px #ffd70022;
+  transition: background 0.18s;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #ff4d4d 60%, #ffd700 100%);
+  color: #fff;
+}
+
+/* ====== Modal Styling ====== */
+.modal-content {
+  background: linear-gradient(135deg, #1e3c72 80%, #ffd700 100%);
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 18px #222;
+  font-family: 'Montserrat', Arial, sans-serif;
+  max-width: 90%;
+  margin: auto;
+}
+
+/* ====== Footer ====== */
+footer {
+  background-color: #f8f9fa;
+  color: #222;
+  font-family: 'Montserrat', Arial, sans-serif;
+  box-shadow: 0 -2px 8px #2222;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer a {
+  color: #222;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #000;
+}
+
+/* ====== Responsive Fixes ====== */
+@media (max-width: 576px) {
+  .choices {
+    gap: 0.7rem;
+  }
+
+  .choice-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+  }
+
+  .game-card {
+    padding: 1.5rem 0.7rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
